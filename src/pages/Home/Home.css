@@ -1,3 +1,36 @@
-.ok{
-    color:red;
+.homeBoxBanner{
+    background-image: url('https://ychef.files.bbci.co.uk/976x549/p01rpz8r.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+}
+
+.packages p{
+color: #F05925;
+}
+
+.servicesDesign{
+    background-color: #e0e6f1;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    
+}
+.servicesDesign .service{
+    margin:20px;
+    padding:20px;
+}
+.servicesDesign .service img{
+width: 100%;
+}
+.service button{
+    width: 50%;
+    height: 45px;
+}
+
+/* -----------------------Responsive part---------------------- */
+@media only screen and (max-width:850px){
+    .servicesDesign{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+    }
 }

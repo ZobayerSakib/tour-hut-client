@@ -1,9 +1,12 @@
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import About from './pages/About/About';
 import Home from './pages/Home/Home';
 import Header from './pages/shared/Header/Header';
 import TourPackage from './pages/TourPackage/TourPackage';
+import Login from './pages/Login/Login';
+import Footer from './pages/shared/Footer/Footer';
 
 function App() {
   return (
@@ -20,8 +23,11 @@ function App() {
           <Route exact path='/packages'>
             <TourPackage></TourPackage>
           </Route>
+          <Route exact path='/login'>
+            <Login></Login>
+          </Route>
         </Switch>
-
+        <Footer></Footer>
       </Router>
     </div>
   );

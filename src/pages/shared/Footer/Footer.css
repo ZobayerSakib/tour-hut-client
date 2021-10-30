@@ -1,0 +1,26 @@
+.footerDesign{
+    background-color: #222222;
+    color:white;
+    padding: 2%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.footerDiv{
+   display: grid; 
+   grid-template-columns: repeat(3,1fr);
+}
+
+.openingDiv{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+
+
+/* ------------------------Responsive Part--------------------------------- */
+
+@media only screen and (max-width:850px) {
+    .footerDiv{
+        display: grid; 
+        grid-template-columns: repeat(1,1fr);
+       padding: 20px;
+     }
+}
