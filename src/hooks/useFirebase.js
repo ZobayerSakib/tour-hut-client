@@ -4,7 +4,10 @@ import React, { useEffect, useState } from 'react';
 import initializeAuthentication from "../firebase/firebase.init";
 initializeAuthentication();
 const useFirebase = () => {
-    const [user, setUser] = useState('')
+    const [services, setServices] = useState([]);
+    const [user, setUser] = useState('');
+    const [tour, setTour] = useState([]);
+
     const provider = new GoogleAuthProvider();
     const auth = getAuth();
     const signInWithGoogle = () => {
@@ -34,9 +37,22 @@ const useFirebase = () => {
         return () => unsubscribe;
     }, [])
 
+    useEffect(() => {
+        fetch('http://localhost:5000/services')
+            .then(res => res.json())
+            .then(data => setServices(data))
+    }, [])
+
+    useEffect(() => {
+        fetch('http://localhost:5000/tourPoint')
+            .then(res => res.json())
+            .then(data => setTour(data))
+    }, [])
 
     return {
         user,
+        services,
+        tour,
         signInWithGoogle,
         logOut
     }

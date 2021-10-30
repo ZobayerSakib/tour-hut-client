@@ -1,3 +1,4 @@
+
 .homeBoxBanner{
     background-image: url('https://ychef.files.bbci.co.uk/976x549/p01rpz8r.jpg');
     background-repeat: no-repeat;
@@ -5,6 +6,9 @@
     height: 500px;
 }
 
+.homePage{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
 .packages p{
 color: #F05925;
 }
@@ -27,10 +31,34 @@ width: 100%;
     height: 45px;
 }
 
+.tourPartDesign{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+
+ .singleTourPart{
+   margin:20px ;
+
+}
+.singleTourPart img{
+    width: 100%;
+}
+
 /* -----------------------Responsive part---------------------- */
 @media only screen and (max-width:850px){
     .servicesDesign{
         display: grid;
         grid-template-columns: repeat(1,1fr);
     }
+
+    .tourPartDesign{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+    }
+
+    .singleTourPart{
+        text-align: center ;
+        margin-top: 15px;
+        
+     }
 }
