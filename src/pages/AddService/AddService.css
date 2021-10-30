@@ -1,0 +1,12 @@
+.formDesign{
+    text-align: center;
+    background-color: tomato;
+}
+.formController{
+   width: 500px;
+   background-color: turquoise;
+   padding:50px;
+}
+.formController input{
+    width: 100%;
+}

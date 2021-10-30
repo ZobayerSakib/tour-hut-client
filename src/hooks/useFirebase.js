@@ -14,7 +14,7 @@ const useFirebase = () => {
         signInWithPopup(auth, provider)
             .then(result => {
                 const user = result.user;
-                console.log(user)
+                setUser(user)
             })
     }
     const logOut = () => {

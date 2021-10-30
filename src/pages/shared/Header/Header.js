@@ -1,20 +1,27 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import useFirebase from '../../../hooks/useFirebase';
 import '../Header/Header.css'
 const Header = () => {
-    const { user, logOut } = useFirebase()
+    const { user, logOut, signInWithGoogle } = useFirebase()
     return (
-        <div className='headerDesign'>
-            <Link to='/home'>Home</Link>
-            <Link to='/about'>About</Link>
-            <Link to='/packages'>Tour Packages</Link>
-            <span> {user.displayName} </span>
-            {
-                user.email ? <button onClick={logOut}>Sign Out</button> :
-                    <Link to='/login'><button>Login</button></Link>
-            }
+        <div>
+            <div className='headerDesign'>
+                <NavLink to='/home'>Home</NavLink>
+                <NavLink to='/about'>About</NavLink>
+                {
+                    user.displayName && <span><Link to='/add'>Add New Service</Link></span>
+                }
+                <NavLink to='/packages'>Tour Packages</NavLink>
+                <span className='text-white'> {user.displayName} </span>
+                {
+                    user.email ? <button onClick={logOut}>Sign Out</button> :
+                        // <Link to='/login'>Login</Link>
+                        <button className='navButton' onClick={signInWithGoogle}>Login</button>
+                }
 
+
+            </div>
 
         </div>
     );

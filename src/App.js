@@ -7,6 +7,8 @@ import Header from './pages/shared/Header/Header';
 import TourPackage from './pages/TourPackage/TourPackage';
 import Login from './pages/Login/Login';
 import Footer from './pages/shared/Footer/Footer';
+import PrivateRoute from './PrivateRoute/PrivateRoute';
+import AddService from './pages/AddService/AddService';
 
 function App() {
   return (
@@ -14,15 +16,21 @@ function App() {
       <Router>
         <Header></Header>
         <Switch>
+          <Route exact path='/'>
+            <Home></Home>
+          </Route>
           <Route exact path='/home'>
             <Home></Home>
           </Route>
           <Route exact path='/about'>
             <About></About>
           </Route>
-          <Route exact path='/packages'>
-            <TourPackage></TourPackage>
+          <Route exact path='/add'>
+            <AddService></AddService>
           </Route>
+          <PrivateRoute exact path='/packages'>
+            <TourPackage></TourPackage>
+          </PrivateRoute>
           <Route exact path='/login'>
             <Login></Login>
           </Route>
