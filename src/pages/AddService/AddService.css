@@ -1,3 +1,6 @@
+.formDesign{
+    text-align: center;
+}
 .formSize{
     text-align: center;
     width: 60%;
@@ -5,6 +8,13 @@
 .formSize input{
     width: 100%;
     padding: 7px;
+    border-radius: 5px;
+    color:red;
+}
+.inputSpecial{
+    background-color: #222222;
+    font-weight: 500;
+    margin-top: 20px;
 }
 
 .formSize .info{

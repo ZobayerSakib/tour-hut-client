@@ -13,6 +13,7 @@ import PrivateRoute from './PrivateRoute/PrivateRoute';
 import Details from './pages/Details/Details';
 import MyPackage from './pages/MyPackage/MyPackage';
 import NotFound from './pages/NotFound/NotFound';
+import OrderComplete from './pages/OrderComplete/OrderComplete';
 
 function App() {
   return (
@@ -36,15 +37,15 @@ function App() {
             <Route exact path='/add'>
               <AddService></AddService>
             </Route>
-            <PrivateRoute exact path='/orderPlace'>
-              <OrderPlace></OrderPlace>
-            </PrivateRoute>
-            <PrivateRoute exact path='/services/details/:id'>
+            <Route exact path='/services/details/:id'>
               <Details></Details>
-            </PrivateRoute>
+            </Route>
             <Route exact path='/login'>
               <Login></Login>
             </Route>
+            <PrivateRoute exact path='/orderComplete'>
+              <OrderComplete></OrderComplete>
+            </PrivateRoute>
             <Route exact path='*'>
               <NotFound></NotFound>
             </Route>

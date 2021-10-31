@@ -31,23 +31,24 @@ const AddService = () => {
         })
             .then()
 
-        // e.preventDefault();
+
     }
     return (
         <div className='mt-4 formDesign'>
-            {/* <h3>Add new Services</h3> */}
+            <h2>Admin Panel</h2>
+            <h4>Add New Service</h4>
             <div>
                 <div className='formSize mx-auto '>
                     <form onSubmit={formHandler} className='formController' >
-                        <input ref={nameRef} type="text" placeholder='package name...' />
+                        <input className='mt-2' ref={nameRef} type="text" placeholder='package name...' />
                         <br />
-                        <input ref={imgRef} type="img" placeholder='image Url' />
+                        <input className='mt-2' ref={imgRef} type="img" placeholder='image Url' />
                         <br />
-                        <input ref={infoRef} className='info' type="text" placeholder='Description' />
+                        <input ref={infoRef} className='info mt-2' type="text" placeholder='Description' />
                         <br />
-                        <input ref={priceRef} type="number" placeholder='service price' />
+                        <input className='mt-2' ref={priceRef} type="number" placeholder='service price' />
                         <br />
-                        <input type="submit" value="Add Service" />
+                        <input className='inputSpecial' type="submit" value="Add Service" />
                     </form>
                 </div>
             </div>

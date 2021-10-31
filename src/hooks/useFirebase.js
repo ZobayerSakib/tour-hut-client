@@ -8,16 +8,12 @@ const useFirebase = () => {
     const [user, setUser] = useState('');
     const [tour, setTour] = useState([]);
     const [loading, setLoading] = useState(true)
-
+    console.log(user)
     const provider = new GoogleAuthProvider();
     const auth = getAuth();
     const signInWithGoogle = () => {
         return signInWithPopup(auth, provider)
-        // .then(result => {
-        //     const user = result.user;
-        //     setUser(user)
 
-        // })
     }
     const logOut = () => {
         setLoading(true);
