@@ -22,7 +22,7 @@ const AddService = () => {
 
         const newService = { name, img, description, price }
 
-        fetch('http://localhost:5000/services', {
+        fetch('https://shrieking-pumpkin-23483.herokuapp.com/services', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

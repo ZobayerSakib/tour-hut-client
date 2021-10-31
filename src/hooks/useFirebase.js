@@ -39,13 +39,13 @@ const useFirebase = () => {
     }, [])
 
     useEffect(() => {
-        fetch('http://localhost:5000/services')
+        fetch('https://shrieking-pumpkin-23483.herokuapp.com/services')
             .then(res => res.json())
             .then(data => setServices(data))
     }, [])
 
     useEffect(() => {
-        fetch('http://localhost:5000/tourPoint')
+        fetch('https://shrieking-pumpkin-23483.herokuapp.com/tourPoint')
             .then(res => res.json())
             .then(data => setTour(data))
     }, [])
