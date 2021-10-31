@@ -14,7 +14,7 @@ const Header = () => {
                 }
                 <NavLink to='/orderPlace'>Tour Packages</NavLink>
                 <span className='text-white'> {user.displayName} </span>
-                <span>{user.imgUrl}</span>
+
                 {
                     user.email ? <button onClick={logOut}>Sign Out</button> :
 

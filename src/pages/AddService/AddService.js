@@ -1,11 +1,18 @@
 import React, { useRef } from 'react';
+import useAuth from '../../hooks/useAuth';
 import './../AddService/AddService.css'
 const AddService = () => {
+    const { loading } = useAuth();
     const nameRef = useRef();
     const imgRef = useRef();
     const infoRef = useRef();
     const priceRef = useRef();
-
+    if (loading) {
+        return <div className='text-center'>
+            <div class="spinner-border text-secondary " role="status">
+            </div>
+        </div>
+    }
     const formHandler = e => {
         e.preventDefault();
         const name = nameRef.current.value;

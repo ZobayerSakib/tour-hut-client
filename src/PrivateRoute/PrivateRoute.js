@@ -1,9 +1,16 @@
 import React from 'react';
 import { Redirect, Route } from 'react-router';
-import useFirebase from '../hooks/useFirebase';
+import useAuth from '../hooks/useAuth';
 
 const PrivateRoute = ({ children, ...rest }) => {
-    const { user } = useFirebase();
+    const { user, loading } = useAuth();
+    if (loading) {
+        return <div className='text-center'>
+            <div class="spinner-border text-secondary " role="status">
+            </div>
+        </div>
+    }
+
     return (
         <Route
             {...rest}

@@ -9,6 +9,8 @@ import Footer from './pages/shared/Footer/Footer';
 import AddService from './pages/AddService/AddService';
 import OrderPlace from './pages/OrderPlace/OrderPlace';
 import AuthProvider from './context/AuthProvider';
+import PrivateRoute from './PrivateRoute/PrivateRoute';
+import Details from './pages/Details/Details';
 
 function App() {
   return (
@@ -29,8 +31,11 @@ function App() {
             <Route exact path='/add'>
               <AddService></AddService>
             </Route>
-            <Route exact path='/orderPlace'>
+            <PrivateRoute exact path='/orderPlace'>
               <OrderPlace></OrderPlace>
+            </PrivateRoute>
+            <Route exact path='/orderPlace/:id'>
+              <Details></Details>
             </Route>
             <Route exact path='/login'>
               <Login></Login>

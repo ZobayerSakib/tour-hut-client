@@ -4,20 +4,14 @@ import useAuth from '../../hooks/useAuth';
 import './../Home/Home.css'
 
 const Home = () => {
-    const { tour, services } = useAuth();
-    // const tour = [
-    //     { title: 'View and Environment', info: 'This awesome view will attract you when you will come to see this weather. We are waiting for your Tour.a journey for business, pleasure, or education often involving a series of stops and ending at the starting point also', img: 'https://i.ibb.co/GRq8xpk/img-1.jpg' },
-
-    //     { title: 'Cool and freshness Travel', info: 'To go from one place to another, as by car, train, plane, or ship; take a trip; journey: to travel for pleasure. to move or go from one place or point to another. to proceed or advance in any way.', img: 'https://i.ibb.co/N6b5T51/img-2.jpg' },
-
-    //     { title: 'Natural Feelings Heaven', info: 'This awesome view will attract you when you will come to see this weather. We are waiting for your Tour.a journey for business, pleasure, or education often involving a series of stops and ending at the starting point also', img: 'https://i.ibb.co/87n74fG/img-3.jpg' },
-
-    //     { title: 'Beauty is Travelling', info: 'To go from one place to another, as by car, train, plane, or ship; take a trip; journey: to travel for pleasure. to move or go from one place or point to another. to proceed or advance in any way.', img: 'https://i.ibb.co/KG1V0YH/img-4.jpg' },
-    // ]
-
-
+    const { tour, services, loading } = useAuth();
+    if (loading) {
+        return <div className='text-center'>
+            <div class="spinner-border text-secondary " role="status">
+            </div>
+        </div>
+    }
     return (
-
         <div className='homePage'>
             <div className='homeBoxBanner'>
                 <h1>Travelling is Our Hobby </h1>
@@ -82,6 +76,8 @@ const Home = () => {
             </div>
 
         </div>
+
+
     );
 };
 
