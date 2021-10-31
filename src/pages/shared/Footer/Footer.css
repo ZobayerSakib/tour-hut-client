@@ -14,7 +14,13 @@
     grid-template-columns: repeat(2,1fr);
 }
 
-
+.footerExplore li{
+list-style: none;
+}
+.footerExplore a{
+    text-decoration: none;
+    color:white;
+}
 /* ------------------------Responsive Part--------------------------------- */
 
 @media only screen and (max-width:850px) {

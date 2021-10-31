@@ -11,6 +11,8 @@ import OrderPlace from './pages/OrderPlace/OrderPlace';
 import AuthProvider from './context/AuthProvider';
 import PrivateRoute from './PrivateRoute/PrivateRoute';
 import Details from './pages/Details/Details';
+import MyPackage from './pages/MyPackage/MyPackage';
+import NotFound from './pages/NotFound/NotFound';
 
 function App() {
   return (
@@ -28,6 +30,9 @@ function App() {
             <Route exact path='/about'>
               <About></About>
             </Route>
+            <PrivateRoute exact path='/myPackage'>
+              <MyPackage></MyPackage>
+            </PrivateRoute>
             <Route exact path='/add'>
               <AddService></AddService>
             </Route>
@@ -39,6 +44,9 @@ function App() {
             </Route>
             <Route exact path='/login'>
               <Login></Login>
+            </Route>
+            <Route exact path='*'>
+              <NotFound></NotFound>
             </Route>
           </Switch>
           <Footer></Footer>

@@ -2,12 +2,15 @@ import React from 'react';
 import { useHistory, useLocation } from 'react-router';
 import useAuth from '../../hooks/useAuth';
 import './../Login/Login.css'
+
+
 const Login = () => {
+
     const { signInWithGoogle } = useAuth()
     const location = useLocation();
     const history = useHistory();
     const redirect_uri = location.state?.from || '/home';
-    console.log(location.state?.from)
+
     const controlGoogleLogin = () => {
         signInWithGoogle()
             .then(result => {
@@ -19,6 +22,8 @@ const Login = () => {
         e.preventDefault();
         alert('Please Use Google Login System. Thanks')
     }
+
+
     return (
         <div className='formDiv'>
             <div className='loginForm mt-4'>

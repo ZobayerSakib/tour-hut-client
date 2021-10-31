@@ -1,3 +1,23 @@
-.okk{
-    background-color: blue;
+.aboutInfo{
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+}
+
+.fontController{
+    background-color: rgb(255 255 255);
+    width: 100px;
+    height: 50px;
+    border-radius: 50%;
+    margin: auto;
+    margin-bottom: 40px;
+    padding:12px;
+    border:3px solid blue;
+}
+/* --------------------------Responsive Part ------------------------------------
+-----------------------------------------------------------------------------------*/
+@media only screen and (max-width:850px) {
+    .aboutInfo{
+        display:grid;
+        grid-template-columns: repeat(1,1fr);
+    }
 }

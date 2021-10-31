@@ -24,13 +24,13 @@ const Footer = () => {
                         </div>
                     </div>
                 </div>
-                <div>
+                <div className='footerExplore'>
                     <h4>Explore</h4>
                     <ul>
                         <li><Link to="/about">About Us</Link></li>
-                        <li><Link to="/about">Service Rates</Link></li>
-                        <li><Link to="/about">Our Packages</Link></li>
-                        <li><Link to="/about">Portfolio</Link></li>
+                        <li><Link to="/rates">Service Rates</Link></li>
+                        <li><Link to="/home">Our Packages</Link></li>
+                        <li><Link to="/portfolio">Portfolio</Link></li>
                         <li><Link to="/about">Contact Us</Link></li>
 
                     </ul>

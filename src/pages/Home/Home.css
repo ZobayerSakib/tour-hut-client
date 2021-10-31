@@ -3,7 +3,7 @@
     background-image: url('https://ychef.files.bbci.co.uk/976x549/p01rpz8r.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    height: 500px;
+    height: 600px;
 }
 
 .homePage{
@@ -42,7 +42,10 @@ width: 100%;
     border-radius: 12px;
 }
 
-
+.post{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
 .tourPartDesign{
     display: grid;
     grid-template-columns: repeat(4,1fr);
@@ -78,5 +81,11 @@ width: 100%;
         height: 45px;
         background-color: #222222;
         color:white;
+    }
+
+    .post{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        text-align: center;
     }
 }
