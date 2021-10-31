@@ -1,12 +1,13 @@
-.formDesign{
+.formSize{
     text-align: center;
-    background-color: tomato;
+    width: 60%;
+    background-color: yellow;
 }
-.formController{
-   width: 500px;
-   background-color: turquoise;
-   padding:50px;
-}
-.formController input{
+.formSize input{
     width: 100%;
+    padding: 7px;
+}
+
+.formSize .info{
+    height: 40px;
 }
