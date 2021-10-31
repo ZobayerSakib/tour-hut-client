@@ -15,7 +15,7 @@ const Header = () => {
                 {
                     user.displayName && <span><Link to='/add'>Add New Service</Link></span>
                 }
-                <NavLink to='/orderPlace'>Tour Packages</NavLink>
+
                 <span className='text-white'> {user.displayName} </span>
 
                 {

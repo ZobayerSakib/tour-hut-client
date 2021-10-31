@@ -37,7 +37,7 @@ const Home = () => {
                         <img width='300' height='250' src={service.img} alt="imag" />
                         <p>{service.description}</p>
                         <p>{service.price} / Per day</p>
-                        <Link to='/orderPlace'>
+                        <Link to={`/services/details/${service._id}`}>
                             <button>Buy Now</button>
                         </Link>
 
