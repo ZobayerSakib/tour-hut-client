@@ -1,0 +1,39 @@
+
+.loginForm{
+    text-align: center;
+    width: 50%;
+    background-color: #f7f3f3;
+    padding:27px;
+    margin: auto;
+    border-radius: 10px;
+   
+}
+.sameDesign{
+    background-color: #222222;
+    color:white;
+}
+
+.formDiv input,button{
+    width: 100%;
+    border-radius: 7px;
+    padding:6px;
+}
+
+/*---------------------------------- Responsive Part -----------------------------
+----------------------------------------------------------------------------------*/
+@media only screen and (max-width:850px) {
+    .loginForm{
+        text-align: center;
+        width: 70%;
+        background-color: #f7f3f3;
+        padding:27px;
+        margin: auto;
+        border-radius: 10px;
+       
+    }
+    .formDiv input,button{
+        width: 100%;
+        border-radius: 7px;
+        padding:6px;
+    }
+}

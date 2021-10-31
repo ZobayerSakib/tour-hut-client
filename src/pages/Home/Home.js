@@ -1,12 +1,10 @@
 import React from 'react';
-import { useEffect } from 'react';
-import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import useFirebase from '../../hooks/useFirebase';
+import useAuth from '../../hooks/useAuth';
 import './../Home/Home.css'
 
 const Home = () => {
-    const { tour, services } = useFirebase();
+    const { tour, services } = useAuth();
     // const tour = [
     //     { title: 'View and Environment', info: 'This awesome view will attract you when you will come to see this weather. We are waiting for your Tour.a journey for business, pleasure, or education often involving a series of stops and ending at the starting point also', img: 'https://i.ibb.co/GRq8xpk/img-1.jpg' },
 
@@ -39,7 +37,7 @@ const Home = () => {
                         <img width='300' height='250' src={service.img} alt="imag" />
                         <p>{service.description}</p>
                         <p>{service.price} / Per day</p>
-                        <Link to='buyPackage'>
+                        <Link to='/orderPlace'>
                             <button>Buy Now</button>
                         </Link>
 
@@ -47,15 +45,18 @@ const Home = () => {
 
                 }
             </div>
-            {/* https://ibb.co/3cnjrdW
-https://ibb.co/ccV0Y0b
-https://ibb.co/5RXRxSC
-https://ibb.co/BP1TzmR */}
+
+
+            {/*----------------- This is Explore Section Of The Home Page ------------*/}
 
             <div className='px-3 mt-5'>
-                <h2>Did You Know</h2>
-                <p>Icon Bosbe House Icon</p>
-                <p>What are the things you should always do on a trip? Plan a trip with us and we will tell you all about it.</p>
+                <div className='explore1'>
+                    <div className='explore2'>
+                        <h2>Did You Know</h2>
+                        <p>Icon Bosbe House Icon</p>
+                        <p>What are the things you should always do on a trip? Plan a trip with us and we will tell you all about it.</p>
+                    </div>
+                </div>
                 <div className='tourPartDesign mt-4'>
                     {
                         tour.map(tourism => <div className='singleTourPart'>
@@ -65,6 +66,18 @@ https://ibb.co/BP1TzmR */}
 
                         </div>)
                     }
+                </div>
+            </div>
+
+
+            {/*--------------- This is post section of Home Page-------------------- */}
+
+            <div className='px-3 mt-5'>
+                <div className='explore1'>
+                    <div className='explore2'>
+                        <h2>Our Regular Post</h2>
+                        <p>We are connecting with you by our regular uploading Post.</p>
+                    </div>
                 </div>
             </div>
 
