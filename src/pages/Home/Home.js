@@ -35,7 +35,7 @@ const Home = () => {
                     >
                         <h3>{service.name}</h3>
                         <img width='300' height='250' src={service.img} alt="imag" />
-                        <p>{service.description}</p>
+                        <p className='mt-4'>{service.description}</p>
                         <p>{service.price} / Per day</p>
                         <Link to={`/services/details/${service._id}`}>
                             <button>Buy Now</button>

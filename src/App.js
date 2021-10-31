@@ -7,7 +7,6 @@ import Header from './pages/shared/Header/Header';
 import Login from './pages/Login/Login';
 import Footer from './pages/shared/Footer/Footer';
 import AddService from './pages/AddService/AddService';
-import OrderPlace from './pages/OrderPlace/OrderPlace';
 import AuthProvider from './context/AuthProvider';
 import PrivateRoute from './PrivateRoute/PrivateRoute';
 import Details from './pages/Details/Details';
@@ -31,9 +30,6 @@ function App() {
             <Route exact path='/about'>
               <About></About>
             </Route>
-            <PrivateRoute exact path='/myPackage'>
-              <MyPackage></MyPackage>
-            </PrivateRoute>
             <Route exact path='/add'>
               <AddService></AddService>
             </Route>

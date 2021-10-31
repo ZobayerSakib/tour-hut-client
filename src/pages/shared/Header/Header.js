@@ -9,9 +9,7 @@ const Header = () => {
             <div className='headerDesign'>
                 <NavLink to='/home'>Home</NavLink>
                 <NavLink to='/about'>About</NavLink>
-                {
-                    user.email && <span><Link to='/myPackage'>My Package</Link></span>
-                }
+
                 {
                     user.displayName && <span><Link to='/add'>Add New Service</Link></span>
                 }
