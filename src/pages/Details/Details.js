@@ -7,8 +7,7 @@ const Details = () => {
     const [tourPackage, setTourPackage] = useState({})
 
     useEffect(() => {
-        const url = `https://shrieking-pumpkin-23483.herokuapp.com/services/${id}`;
-        fetch(url)
+        fetch(`https://shrieking-pumpkin-23483.herokuapp.com/services/${id}`)
             .then(res => res.json())
             .then(data => setTourPackage(data))
     }, [])

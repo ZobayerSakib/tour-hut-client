@@ -10,7 +10,6 @@ import AddService from './pages/AddService/AddService';
 import AuthProvider from './context/AuthProvider';
 import PrivateRoute from './PrivateRoute/PrivateRoute';
 import Details from './pages/Details/Details';
-import MyPackage from './pages/MyPackage/MyPackage';
 import NotFound from './pages/NotFound/NotFound';
 import OrderComplete from './pages/OrderComplete/OrderComplete';
 

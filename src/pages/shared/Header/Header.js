@@ -11,7 +11,7 @@ const Header = () => {
                 <NavLink to='/about'>About</NavLink>
 
                 {
-                    user.displayName && <span><Link to='/add'>Add New Service</Link></span>
+                    user.displayName && <span><Link to='/add'>Add new service</Link></span>
                 }
 
                 <span className='text-white'> {user.displayName} </span>
