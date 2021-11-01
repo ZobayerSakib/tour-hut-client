@@ -42,7 +42,8 @@ const useFirebase = () => {
     }, [])
 
     useEffect(() => {
-        fetch('https://shrieking-pumpkin-23483.herokuapp.com/services')
+        const url = 'https://shrieking-pumpkin-23483.herokuapp.com/services';
+        fetch(url)
             .then(res => res.json())
             .then(data => setServices(data))
     }, [])
